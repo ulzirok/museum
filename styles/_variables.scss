@@ -6,13 +6,13 @@
   
   --container-width: 1440px;
   
-  // @media (max-width: 1024px) {
-  //   :root {
-  //     --container-width: 1024px;
-  //   }
-  // }
+  @media (max-width: 1024px) {
+    :root {
+      --container-width: 984px;
+    }
+  }
   
   --font-family-base: 'Roboto', sans-serif;
   
-  --transition-duration: 0.3s;
+  --transition-duration: 0.2s;
 }
