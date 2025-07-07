@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,201 @@
   <link rel="stylesheet" href="./styles/style.css">
   <link rel="icon" href="assets/favicon.ico">
 </head>
+
 <body>
-  
-  
-  
+
+  <header class="header dark-section">
+    <div class="container">
+      <div class="header__inner">
+        <a href="#welcome" class="header__logo logo">
+          <img src="assets/icon/logo.svg" alt="Logo" class="logo__image" width="49" height="26" loading="lazy">
+          Louvre
+        </a>
+        <nav class="header__menu">
+          <ul class="header__menu-list">
+            <li class="header__menu-item">
+              <a href="#visiting" class="header__menu-link">Visiting</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="" class="header__menu-link">Explore</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#video" class="header__menu-link">Video</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#gallery" class="header__menu-link">Gallery</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#tickets" class="header__menu-link">Tickets</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#contacts" class="header__menu-link">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <section class="welcome dark-section" id="welcome">
+      <div class="container">
+        <div class="welcome__inner">
+          <div class="welcome__desc">
+            <h1 class="welcome__desc-title">Welcome <br>
+              to the Louvre
+            </h1>
+            <p class="welcome__desc-text">From the castle to the museum</p>
+            <a href="tours/tour1.html" class="welcome__desc-button">Discover the Louvre</a>
+          </div>
+          <div class="welcome__img-wrapper">
+            <img src="assets/img/header-bg.jpg" class="welcome__img" alt="Slider Poster" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="visiting section light-section" id="visiting">
+      <div class="container">
+        <h2 class="visiting__title title">Virtual tour</h2>
+        <div class="visiting__inner">
+          <a href="tours/tour2.html" class="visiting__card" target="_blank">
+            <img src="assets/img/visiting/1.jpg" alt="Royal Palace" class="visiting__card-img" width="440" height="285"
+              loading="lazy">
+            <h2 class="visiting__card-title">Royal Palace</h2>
+            <p class="visiting__card-desc">
+              <span>360° Virtual Tour</span> <br>
+              <span>Google Street Panorama View</span>
+            </p>
+          </a>
+          <a href="tours/tour3.html" class="visiting__card" target="_blank">
+            <img src="assets/img/visiting/2.jpg" alt="Denon Wing" class="visiting__card-img" width="440" height="285"
+              loading="lazy">
+            <h2 class="visiting__card-title section-title underline-title">Denon Wing</h2>
+            <p class="visiting__card-desc">
+              <span>360° Virtual Tour</span> <br>
+              <span>Google Street Panorama View</span>
+            </p>
+          </a>
+          <a href="tours/tour4.html" class="visiting__card" target="_blank">
+            <img src="assets/img/visiting/3.jpg" alt="Colonnade Perrault" class="visiting__card-img" width="440"
+              height="285" loading="lazy">
+            <h2 class="visiting__card-title section-title underline-title">Colonnade Perrault</h2>
+            <p class="visiting__card-desc">
+              <span>360° Virtual Tour</span> <br>
+              <span>Google Street Panorama View</span>
+            </p>
+          </a>
+          <a href="tours/tour5.html" class="visiting__card" target="_blank">
+            <img src="assets/img/visiting/4.jpg" alt="Greek hall" class="visiting__card-img" width="440" height="285"
+              loading="lazy">
+            <h2 class="visiting__card-title section-title underline-title">Greek hall</h2>
+            <p class="visiting__card-desc">
+              <span>360° Virtual Tour</span> <br>
+              <span>Google Street Panorama View</span>
+            </p>
+          </a>
+          <a href="tours/tour6.html" class="visiting__card" target="_blank">
+            <img src="assets/img/visiting/5.jpg" alt="Mona Lisa" class="visiting__card-img" width="440" height="285"
+              loading="lazy">
+            <h2 class="visiting__card-title section-title underline-title">Mona Lisa</h2>
+            <p class="visiting__card-desc">
+              <span>360° Virtual Tour</span> <br>
+              <span>Google Street Panorama View</span>
+            </p>
+          </a>
+          <a href="tours/tour7.html" class="visiting__card" target="_blank">
+            <img src="assets/img/visiting/6.jpg" alt="Night Palace" class="visiting__card-img" width="440" height="285"
+              loading="lazy">
+            <h2 class="visiting__card-title section-title underline-title">Night Palace</h2>
+            <p class="visiting__card-desc">
+              <span>360° Virtual Tour</span> <br>
+              <span>Google Street Panorama View</span>
+            </p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="explore section dark-section" id="explore">
+      <div class="container">
+        <div class="explore__inner">
+          <div class="explore__desc">
+            <h2 class="explore__desc-title title">Picture explore</h2>
+            <p class="explore__desc-text text">Las Meninas is a 1656 painting by Diego Velázquez, the leading artist of the
+              Spanish Golden Age.</p>
+            <p class="explore__desc-text text">It was cleaned in 1984 to remove a <span>"yellow veil"</span> of dust that
+              had gathered since the previous restoration in the 19th century.</p>
+            <p class="explore__desc-text text">The cleaning provoked furious protests, not because the picture had been
+              damaged in any way, but because it looked different.</p>
+          </div>
+          <div class="explore__slider-cover">
+            <img src="assets/img/explore-slider/Poster.jpg" alt="Slider Poster" width="720" height="700" loading="lazy">
+            <img src="assets/img/explore-slider/Poster1-half.jpg" alt="Slider Poster" class="explore__slider-half"
+              width="440" height="700" loading="lazy">
+            <img src="assets/icon/explore-line.svg" alt="Line" class="explore__slider-line" width="39" height="700"
+              loading="lazy">
+          </div>
+
+        </div>
+      </div>
+    </section>
+    
+    <section class="video section light-section" id="video">
+        <div class="container">
+          <div class="video__inner">
+            <div class="video__desc">
+              <h2 class="video__desc-title title">Video journey</h2>
+              <p class="video__desc-text text">Enter and visit one of the most famous museums in the world and enjoy
+                masterpieces such as Mona Lisa or Hammurabi's Code</p>
+            </div>
+            <div class="video__body">
+              <iframe src="https://www.youtube.com/embed/zp1BXPX8jcU?si=_xlTmq86a7Ixn5U-" title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <div class="video__range">
+                <img src="assets/icon/video-play.svg" alt="Play" class="video__range-play" width="23" height="31"
+                  loading="lazy">
+                <input type="range" class="video__range-input">
+                <img src="assets/icon/video-volume.svg" alt="Volume" class="video__range-volume" width="38" height="31"
+                  loading="lazy">
+                <input type="range" class="video__range-input-vol">
+                <img src="assets/icon/video-fullscreen.svg" alt="Fullscreen" class="video__range-fullscreen" width="35"
+                  height="35">
+              </div>
+            </div>
+            <div class="video__slider">
+              <div class="video__slider-inner">
+                <iframe loading="lazy" width="452" height="254"
+                  src="https://www.youtube.com/embed/Vi5D6FKhRmo?si=EwDjIXvcQqRyBBT6" title="YouTube video player"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe loading="lazy" width="452" height="254"
+                  src="https://www.youtube.com/embed/NOhDysLnTvY?si=-bYyXfaIL4j0jMHB" title="YouTube video player"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe loading="lazy" width="452" height="254"
+                  src="https://www.youtube.com/embed/aWmJ5DgyWPI?si=SBI3_VTEgXAfpNe3" title="YouTube video player"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+              <ul class="video__slider-indicators">
+                <li><img src="assets/icon/video-left.svg" alt="Previous" width="10" height="12"></li>
+                <li class="video__slider-indicator active"></li>
+                <li class="video__slider-indicator"></li>
+                <li class="video__slider-indicator"></li>
+                <li class="video__slider-indicator"></li>
+                <li class="video__slider-indicator"></li>
+                <li><img src="assets/icon/video-right.svg" alt="Next" width="10" height="12"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+  </main>
+
 </body>
+
 </html>
