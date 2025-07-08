@@ -160,19 +160,22 @@
               masterpieces such as Mona Lisa or Hammurabi's Code</p>
           </div>
           <div class="video__body">
-            <iframe src="https://www.youtube.com/embed/zp1BXPX8jcU?si=_xlTmq86a7Ixn5U-" title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <video class="video-main" src="assets/video/video0.mp4" poster="assets/video/poster2.jpg"></video>
+              
             <div class="video__range">
-              <img src="assets/icon/video-play.svg" alt="Play" class="video__range-play" width="23" height="31"
+              <img src="assets/icon/video-play.svg" alt="Play" class="video__range-play play-toggle" width="23" height="31"
                 loading="lazy">
-              <input type="range" class="video__range-input">
+              <input type="range" class="video__range-input" max="100" value="0">
+              <div class="controls__time">00:00</div>
               <img src="assets/icon/video-volume.svg" alt="Volume" class="video__range-volume" width="38" height="31"
                 loading="lazy">
               <input type="range" class="video__range-input-vol">
               <img src="assets/icon/video-fullscreen.svg" alt="Fullscreen" class="video__range-fullscreen" width="35"
                 height="35">
             </div>
+            
+            
+            
           </div>
           <div class="video__slider">
             <div class="video__slider-inner">
@@ -367,12 +370,15 @@
           <p><time datetime="2025">© 2025</time></p>
           <a href="https://rs.school/courses/javascript-ru" class="footer__link">The Rolling Scopes School</a>
           <a href="https://github.com/ulzirok" class="footer__link">Ulzira Perdebayeva</a>
-          
+
         </div>
       </div>
     </div>
   </footer>
 
+  <script src="./js/gallery.js" defer></script>
+  <script src="./js/videopleer.js" defer></script>
+  <script src="./js/videopleer.js" defer></script>
 </body>
 
 </html>
