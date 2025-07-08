@@ -13,7 +13,8 @@ function toggleVideo () {
   if (video.paused) {
     video.play()
     toggle.src = './assets/icon/pause.png'
-    toggle.style.width = '40px'
+    toggle.style.width = '23px'
+    toggle.style.height = '31px'
   }
   else {
     video.pause()
@@ -44,8 +45,6 @@ volume.addEventListener('input', volum)
 
 function volum() {
    let vol = this.value
-   console.log(vol);
-   
    video.volume = vol / 100
 }
 

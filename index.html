@@ -18,6 +18,13 @@
           <img src="assets/icon/logo.svg" alt="Logo" class="logo__image" width="49" height="26" loading="lazy">
           Louvre
         </a>
+
+        <div class="menu__icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
         <nav class="header__menu">
           <ul class="header__menu-list">
             <li class="header__menu-item">
@@ -40,6 +47,7 @@
             </li>
           </ul>
         </nav>
+
       </div>
     </div>
   </header>
@@ -139,12 +147,10 @@
             <p class="explore__desc-text text">The cleaning provoked furious protests, not because the picture had been
               damaged in any way, but because it looked different.</p>
           </div>
-          <div class="explore__slider-cover">
-            <img src="assets/img/explore-slider/Poster.jpg" alt="Slider Poster" width="720" height="700" loading="lazy">
-            <img src="assets/img/explore-slider/Poster1-half.jpg" alt="Slider Poster" class="explore__slider-half"
-              width="440" height="700" loading="lazy">
-            <img src="assets/icon/explore-line.svg" alt="Line" class="explore__slider-line" width="39" height="700"
-              loading="lazy">
+
+          <div class="slider__explore">
+            <div class="original-image" alt="Slider Poster" width="710" height="700"></div>
+            <input type="range" value="40" max="100">
           </div>
 
         </div>
@@ -160,11 +166,11 @@
               masterpieces such as Mona Lisa or Hammurabi's Code</p>
           </div>
           <div class="video__body">
-            <video class="video-main" src="assets/video/video0.mp4" poster="assets/video/poster2.jpg"></video>
-              
+            <video class="video-main" src="assets/video/video0.mp4" poster="assets/video/poster0.jpg"></video>
+
             <div class="video__range">
-              <img src="assets/icon/video-play.svg" alt="Play" class="video__range-play play-toggle" width="23" height="31"
-                loading="lazy">
+              <img src="assets/icon/video-play.svg" alt="Play" class="video__range-play play-toggle" width="23"
+                height="31" loading="lazy">
               <input type="range" class="video__range-input" max="100" value="0">
               <div class="controls__time">00:00</div>
               <img src="assets/icon/video-volume.svg" alt="Volume" class="video__range-volume" width="38" height="31"
@@ -173,9 +179,9 @@
               <img src="assets/icon/video-fullscreen.svg" alt="Fullscreen" class="video__range-fullscreen" width="35"
                 height="35">
             </div>
-            
-            
-            
+
+
+
           </div>
           <div class="video__slider">
             <div class="video__slider-inner">
@@ -314,7 +320,7 @@
   <footer class="footer dark-section">
     <div class="container">
       <div class="footer__top">
-        <a href="#welcome" class="header__logo logo">
+        <a href="#welcome" class="logo">
           <img src="assets/icon/logo.svg" alt="Logo" class="logo__image" width="49" height="26" loading="lazy">
           Louvre
         </a>
@@ -370,13 +376,17 @@
           <p><time datetime="2025">© 2025</time></p>
           <a href="https://rs.school/courses/javascript-ru" class="footer__link">The Rolling Scopes School</a>
           <a href="https://github.com/ulzirok" class="footer__link">Ulzira Perdebayeva</a>
-
         </div>
       </div>
     </div>
   </footer>
 
+  <div class="scrollTop">TOP</div>
+
+  <script src="./js/scrolltop.js" defer></script>
+  <script src="./js/burger.js" defer></script>
   <script src="./js/gallery.js" defer></script>
+  <script src="./js/explore.js" defer></script>
   <script src="./js/videopleer.js" defer></script>
   <script src="./js/videopleer.js" defer></script>
 </body>
