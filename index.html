@@ -64,9 +64,40 @@
             <p class="welcome__desc-text">From the castle to the museum</p>
             <a href="tours/tour1.html" class="welcome__desc-button">Discover the Louvre</a>
           </div>
+
           <div class="welcome__img-wrapper">
-            <img src="assets/img/header-bg.jpg" class="welcome__img" alt="Slider Poster" loading="lazy">
+            <div class="welcome__slider-inner">
+
+              <img src="assets/img/header-bg.jpg" class="welcome__img" alt="Slider Poster" loading="lazy">
+              <img src="assets/img/welcome-slider/2.jpg" alt="Slider-image" class="welcome__img welcome__slider-img">
+              <img src="assets/img/welcome-slider/3.jpg" alt="Slider-image" class="welcome__img welcome__slider-img">
+              <img src="assets/img/welcome-slider/4.jpg" alt="Slider-image" class="welcome__img welcome__slider-img">
+              <img src="assets/img/welcome-slider/5.jpg" alt="Slider-image" class="welcome__img welcome__slider-img">
+            </div>
           </div>
+
+          <div class="welcome__slider-item">
+            <div class="welcome__slider-number">
+              <span id="current">01</span>|<span id="total">05</span>
+            </div>
+            <ul class="welcome__slider-indicators">
+              <li class="active"></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+            <div class="welcome__slider-arrows">
+              <button class="controls welcome__slider-btn welcome__slider-prev prev" type="button">
+                <img src="./assets/icon/arrow-prev.svg" alt="Previous" class="slider__arrows-img" width="30" height="8">
+              </button>
+              <button class="controls welcome__slider-btn welcome__slider-next next" type="button">
+                <img src="./assets/icon/arrow-next.svg" alt="Next" class="slider__arrows-img" width="30" height="8">
+              </button>
+            </div>
+          </div>
+
+
         </div>
       </div>
     </section>
@@ -173,41 +204,40 @@
                 height="31" loading="lazy">
               <input type="range" class="video__range-input" max="100" value="0">
               <div class="controls__time">00:00</div>
-              <img src="assets/icon/video-volume.svg" alt="Volume" class="video__range-volume" width="38" height="31"
+              <button class="video__range-btn" title="Выключить звук">
+                <img src="assets/icon/video-volume.svg" alt="Volume" class="video__range-volume" width="38" height="31"
                 loading="lazy">
+              </button>
               <input type="range" class="video__range-input-vol">
               <img src="assets/icon/video-fullscreen.svg" alt="Fullscreen" class="video__range-fullscreen" width="35"
                 height="35">
             </div>
-
-
-
           </div>
+          
+          
           <div class="video__slider">
             <div class="video__slider-inner">
-              <iframe loading="lazy" width="452" height="254"
-                src="https://www.youtube.com/embed/Vi5D6FKhRmo?si=EwDjIXvcQqRyBBT6" title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-              <iframe loading="lazy" width="452" height="254"
-                src="https://www.youtube.com/embed/NOhDysLnTvY?si=-bYyXfaIL4j0jMHB" title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-              <iframe loading="lazy" width="452" height="254"
-                src="https://www.youtube.com/embed/aWmJ5DgyWPI?si=SBI3_VTEgXAfpNe3" title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <video class="video__slider-slide" src="./assets/video/video0.mp4" poster="./assets/video/poster0.jpg" id="0" controls></video>
+              <video class="video__slider-slide" src="./assets/video/video1.mp4" poster="./assets/video/poster1.jpg" id="1" controls></video>
+              <video class="video__slider-slide" src="./assets/video/video2.mp4" poster="./assets/video/poster2.jpg" id="2" controls></video>
+              <video class="video__slider-slide" src="./assets/video/video3.mp4" poster="./assets/video/poster3.jpg" id="3" controls></video>
+              <video class="video__slider-slide" src="./assets/video/video4.mp4" poster="./assets/video/poster4.jpg" id="4" controls></video>
+              <video class="video__slider-slide" src="./assets/video/video0.mp4" poster="./assets/video/poster0.jpg" id="0" controls></video>
+              <video class="video__slider-slide" src="./assets/video/video2.mp4" poster="./assets/video/poster2.jpg" id="2" controls></video>
+             
             </div>
-            <ul class="video__slider-indicators">
-              <li><img src="assets/icon/video-left.svg" alt="Previous" width="10" height="12"></li>
+          </div>
+          
+          <ul class="video__slider-indicators">
+              <!-- <div><img src="assets/icon/video-left.svg" alt="Previous" width="10" height="12"></div> -->
               <li class="video__slider-indicator active"></li>
               <li class="video__slider-indicator"></li>
               <li class="video__slider-indicator"></li>
               <li class="video__slider-indicator"></li>
               <li class="video__slider-indicator"></li>
-              <li><img src="assets/icon/video-right.svg" alt="Next" width="10" height="12"></li>
+              <!-- <div><img src="assets/icon/video-right.svg" alt="Next" width="10" height="12"></div> -->
             </ul>
-          </div>
+          
         </div>
       </div>
     </section>
@@ -382,9 +412,13 @@
   </footer>
 
   <div class="scrollTop">TOP</div>
-
+ 
+  
+  <script src="./js/sliderImg.js" defer></script>
+  <script src="./js/sliderVideo.js" defer></script>
   <script src="./js/scrolltop.js" defer></script>
   <script src="./js/burger.js" defer></script>
+  
   <script src="./js/gallery.js" defer></script>
   <script src="./js/explore.js" defer></script>
   <script src="./js/videopleer.js" defer></script>

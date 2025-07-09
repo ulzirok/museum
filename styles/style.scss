@@ -340,6 +340,10 @@ body.lock {
   background-color: var(--color-gold);
 }
 
+.hidden {
+  display: none;
+}
+
 
 
 //Секции
@@ -450,6 +454,7 @@ body.lock {
     top: 0;
     left: 0;
     margin-top: 9.375rem;
+    z-index: 20;
 
     @include _768-block {
       position: static;
@@ -501,7 +506,7 @@ body.lock {
     }
 
     &-button {
-      padding: 2rem 4rem;
+      padding: 1.5rem 3rem;
       background-color: var(--color-dark-red);
       border-radius: 10px;
       font-size: 1.375rem;
@@ -522,12 +527,25 @@ body.lock {
     }
   }
 
+  &__slider {
+
+    &-inner {
+      width: 4000px;
+      // outline: 1px solid blue;
+      display: flex;
+      transition: 1s;
+      left: 0;
+      position: relative;
+    }
+  }
+
   &__img {
-    width: 100%;
-    height: auto;
+
 
     &-wrapper {
+      position: relative;
       width: 1000px;
+      overflow: hidden;
 
       @include _1024-block {
         width: 700px;
@@ -535,7 +553,6 @@ body.lock {
 
       @include _768-block {
         width: 728px;
-
       }
 
       @include _768-block {
@@ -543,7 +560,63 @@ body.lock {
 
       }
     }
+
   }
+
+  &__slider {
+   
+    &-item {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 600px;
+      display: flex;
+      justify-content: center;
+      gap: 0 55px;
+      padding: 40px 75px;
+      background-color: var(--color-dark);
+      align-items: baseline;
+    }
+
+    &-indicators {
+      display: flex;
+      justify-content: center;
+      gap: 0 25px;
+    }
+
+    &-indicators li {
+      cursor: pointer;
+      width: 16px;
+      height: 16px;
+      background-color: var(--color-light);
+    }
+
+    &-indicators li.active {
+      background-color: var(--color-gold);
+    }
+
+    &-number {
+      font-weight: 400;
+      letter-spacing: 0;
+      line-height: 40px;
+      display: flex;
+      gap: 0 10px;
+    }
+
+    &-arrows {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0 10px;
+    }
+
+    &-btn {
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+    }
+  }
+
 }
 
 .visiting {
@@ -841,35 +914,48 @@ body.lock {
         margin-bottom: 20px;
       }
     }
+    
+    &-btn {
+      background-color: transparent;
+      border: none;
+      outline: none;
+    }
   }
 
   &__slider {
-    position: relative;
+    margin: 0 auto;
+      width: 1440px;
+      height: 254px;
+      overflow: hidden;
 
     &-inner {
+      position: relative;
+      width: 2400px;
       display: flex;
-
-      gap: 1.315rem 2.63rem;
-      margin-bottom: 2.5rem;
+     gap: 0 40px;
 
       @include _1024-block {
         display: flex;
         justify-content: center;
-        // flex-direction: column;
         flex-wrap: wrap;
         align-items: center;
-        // gap: ;
       }
 
       @include _1024-block {
         gap: 20px;
       }
+
       @include _420-block {
         margin-bottom: 40px;
         margin-top: 40px;
       }
 
-      iframe {
+    }
+    
+    &-slide {
+        width: 470px;
+        height: 254px;
+        
         @include _1024-block {
           width: 300px;
           height: 170px;
@@ -885,17 +971,16 @@ body.lock {
           height: 100px;
         }
       }
-    }
+      
+    
 
     &-indicators {
-      position: absolute;
-      bottom: -20%;
-      left: 50%;
-      transform: translateX(-50%);
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 0 20px;
+      margin-top: 40px;
+      cursor: pointer;
 
       @include _768-block {
         bottom: -8%;
@@ -903,8 +988,8 @@ body.lock {
     }
 
     &-indicator {
-      width: 12px;
-      height: 12px;
+      width: 20px;
+      height: 20px;
       border-radius: 50%;
       background-color: #999;
 

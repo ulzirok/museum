@@ -5,6 +5,8 @@ const toggle = document.querySelector('.play-toggle')
 const volume = document.querySelector('.video__range-input-vol')
 const fullscreen = document.querySelector('.video__range-fullscreen')
 const time = document.querySelector('.controls__time')
+const volumeImg = document.querySelector('.video__range-volume')
+const volumeBtn = document.querySelector('.video__range-btn')
 
 play.addEventListener('click', toggleVideo) 
 video.addEventListener('click', toggleVideo) 
@@ -47,6 +49,18 @@ function volum() {
    let vol = this.value
    video.volume = vol / 100
 }
+
+volumeBtn.addEventListener('click', () => {
+  video.muted = !video.muted;
+  
+  if (video.muted) {
+    volumeImg.src = './assets/icon/muted.png'
+    volumeImg.style.width = '35px'
+    volumeImg.style.height = '35px'
+  } else {
+    volumeImg.src = './assets/icon/video-volume.svg'
+  }
+})
 
 fullscreen.addEventListener('click', () => {
   if (!document.fullscreenElement) {
