@@ -273,7 +273,7 @@ body.lock {
   height: 18px;
   display: none;
   position: relative;
-  z-index: 15;
+  z-index: 111;
   cursor: pointer;
 
 }
@@ -392,7 +392,7 @@ body.lock {
       transition: all .2s;
       background-color: rgba(0, 0, 0, 0.8);
       color: var(--color-light);
-      z-index: 10;
+      z-index: 110;
       padding: 0;
     }
 
@@ -513,7 +513,7 @@ body.lock {
       font-weight: 300;
 
       @include _1024-block {
-        padding: 20px 45px;
+        padding: 18px 32px;
         font-size: 20px;
       }
 
@@ -536,11 +536,17 @@ body.lock {
       transition: 1s;
       left: 0;
       position: relative;
+      
+      @include _420-block {
+      }
     }
   }
 
   &__img {
-
+   @include _420-block {
+    width: 380px;
+    height: 285px;
+   }
 
     &-wrapper {
       position: relative;
@@ -551,13 +557,13 @@ body.lock {
         width: 700px;
       }
 
-      @include _768-block {
-        width: 728px;
-      }
+      // @include _768-block {
+      //   width: 728px;
+      // }
 
-      @include _768-block {
+      @include _420-block {
         width: 380px;
-
+       
       }
     }
 
@@ -576,6 +582,10 @@ body.lock {
       padding: 40px 75px;
       background-color: var(--color-dark);
       align-items: baseline;
+      
+      @include _420-block {
+        display: none;
+      }
     }
 
     &-indicators {
@@ -859,7 +869,7 @@ body.lock {
 
       @include _420-block {
         width: 70%;
-        margin-bottom: 20px;
+        // margin-bottom: 20px;
       }
 
       max-width: 720px;
@@ -905,17 +915,23 @@ body.lock {
     }
 
     &-input-vol {
+      cursor: pointer;
       width: 145px;
       height: 15px;
     }
 
     &-play {
+      cursor: pointer;
       @include _420-block {
-        margin-bottom: 20px;
+        // margin-bottom: 20px;
       }
+    }
+    &-fullscreen {
+      cursor: pointer;
     }
     
     &-btn {
+      cursor: pointer;
       background-color: transparent;
       border: none;
       outline: none;
@@ -927,28 +943,33 @@ body.lock {
       width: 1440px;
       height: 254px;
       overflow: hidden;
+      
+      @include _1024-block {
+        width: 940px;
+      }
+      @include _768-block {
+        width: 728px;
+      }
+      @include _420-block {
+        width: 380px;
+        height: auto;
+      }
 
     &-inner {
       position: relative;
       width: 2400px;
       display: flex;
      gap: 0 40px;
-
-      @include _1024-block {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        align-items: center;
-      }
-
-      @include _1024-block {
-        gap: 20px;
-      }
-
-      @include _420-block {
-        margin-bottom: 40px;
-        margin-top: 40px;
-      }
+     
+     
+     @include _768-block {
+      gap: 0 20px;
+      width: 1500px;
+     }
+     @include _420-block {
+      // gap: 0;
+     }
+     
 
     }
     
@@ -956,20 +977,14 @@ body.lock {
         width: 470px;
         height: 254px;
         
-        @include _1024-block {
-          width: 300px;
-          height: 170px;
-        }
 
         @include _768-block {
-          width: 354px;
-          height: 199px;
+          width: 380px;
+          height: auto;
         }
+        
 
-        @include _768-block {
-          width: 180px;
-          height: 100px;
-        }
+        
       }
       
     
@@ -984,6 +999,9 @@ body.lock {
 
       @include _768-block {
         bottom: -8%;
+      }
+      @include _420-block {
+        display: none;
       }
     }
 
