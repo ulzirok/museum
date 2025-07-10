@@ -29,5 +29,15 @@ realTypeInput.addEventListener('input', () => {
   realTypeText.textContent = `${selectedTime}`
 })
 //
+const selectYear = document.getElementById('booking__blok4-select')
+const currentYear = new Date().getFullYear()
+
+for(let i = 0; i <= 10; i++) {
+  const year = currentYear + i
+  const option = document.createElement('option')
+  option.value = year
+  option.textContent = year
+  selectYear.appendChild(option)
+}
 
 
