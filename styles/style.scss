@@ -273,7 +273,7 @@ body.lock {
   height: 18px;
   display: none;
   position: relative;
-  z-index: 15;
+  z-index: 111;
   cursor: pointer;
 
 }
@@ -392,7 +392,7 @@ body.lock {
       transition: all .2s;
       background-color: rgba(0, 0, 0, 0.8);
       color: var(--color-light);
-      z-index: 10;
+      z-index: 110;
       padding: 0;
     }
 
@@ -513,7 +513,7 @@ body.lock {
       font-weight: 300;
 
       @include _1024-block {
-        padding: 20px 45px;
+        padding: 18px 32px;
         font-size: 20px;
       }
 
@@ -536,11 +536,16 @@ body.lock {
       transition: 1s;
       left: 0;
       position: relative;
+
+      @include _420-block {}
     }
   }
 
   &__img {
-
+    @include _420-block {
+      width: 380px;
+      height: 285px;
+    }
 
     &-wrapper {
       position: relative;
@@ -551,11 +556,11 @@ body.lock {
         width: 700px;
       }
 
-      @include _768-block {
-        width: 728px;
-      }
+      // @include _768-block {
+      //   width: 728px;
+      // }
 
-      @include _768-block {
+      @include _420-block {
         width: 380px;
 
       }
@@ -564,7 +569,7 @@ body.lock {
   }
 
   &__slider {
-   
+
     &-item {
       position: absolute;
       bottom: 0;
@@ -576,6 +581,10 @@ body.lock {
       padding: 40px 75px;
       background-color: var(--color-dark);
       align-items: baseline;
+
+      @include _420-block {
+        display: none;
+      }
     }
 
     &-indicators {
@@ -859,7 +868,7 @@ body.lock {
 
       @include _420-block {
         width: 70%;
-        margin-bottom: 20px;
+        // margin-bottom: 20px;
       }
 
       max-width: 720px;
@@ -905,17 +914,25 @@ body.lock {
     }
 
     &-input-vol {
+      cursor: pointer;
       width: 145px;
       height: 15px;
     }
 
     &-play {
+      cursor: pointer;
+
       @include _420-block {
-        margin-bottom: 20px;
+        // margin-bottom: 20px;
       }
     }
-    
+
+    &-fullscreen {
+      cursor: pointer;
+    }
+
     &-btn {
+      cursor: pointer;
       background-color: transparent;
       border: none;
       outline: none;
@@ -924,55 +941,57 @@ body.lock {
 
   &__slider {
     margin: 0 auto;
-      width: 1440px;
-      height: 254px;
-      overflow: hidden;
+    width: 1440px;
+    height: 254px;
+    overflow: hidden;
+
+    @include _1024-block {
+      width: 940px;
+    }
+
+    @include _768-block {
+      width: 728px;
+    }
+
+    @include _420-block {
+      width: 380px;
+      height: auto;
+    }
 
     &-inner {
       position: relative;
       width: 2400px;
       display: flex;
-     gap: 0 40px;
+      gap: 0 40px;
 
-      @include _1024-block {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        align-items: center;
-      }
 
-      @include _1024-block {
-        gap: 20px;
+      @include _768-block {
+        gap: 0 20px;
+        width: 1500px;
       }
 
       @include _420-block {
-        margin-bottom: 40px;
-        margin-top: 40px;
+        // gap: 0;
       }
+
 
     }
-    
+
     &-slide {
-        width: 470px;
-        height: 254px;
-        
-        @include _1024-block {
-          width: 300px;
-          height: 170px;
-        }
+      width: 470px;
+      height: 254px;
 
-        @include _768-block {
-          width: 354px;
-          height: 199px;
-        }
 
-        @include _768-block {
-          width: 180px;
-          height: 100px;
-        }
+      @include _768-block {
+        width: 380px;
+        height: auto;
       }
-      
-    
+
+
+
+    }
+
+
 
     &-indicators {
       display: flex;
@@ -984,6 +1003,10 @@ body.lock {
 
       @include _768-block {
         bottom: -8%;
+      }
+
+      @include _420-block {
+        display: none;
       }
     }
 
@@ -1438,6 +1461,162 @@ body.lock {
 
     &:hover {
       color: var(--color-gold);
+    }
+  }
+}
+
+//Form
+
+.form__wrapper {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+
+  input[type="date"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    
+  }
+
+  select {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 111;
+  }
+
+  &-fake {
+    border: 1px solid var(--color-dark);
+    width: 190px; //fix width
+    height: 45px;
+    display: flex;
+    align-items: center;
+    
+  }
+
+  &-dateIcon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+  }
+
+  &-dateText {
+    margin-left: 45px;
+    display: inline-block;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: auto;
+    letter-spacing: normal;
+    color: var(--color-dark);
+    background: var(--color-light);
+  }
+
+  &-dateArrow {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.booking {
+  max-width: 970px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  &__title {
+    font-size: 50px;
+    line-height: 1;
+    color: var(--color-gold);
+    letter-spacing: normal;
+    padding: 0;
+  }
+
+  &__text {
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 400;
+    color: var(--color-dark-red);
+    margin: 15px 0 10px 0;
+  }
+
+  &__line {
+    width: 400px;
+    height: 3px;
+    color: var(--color-dark-red);
+    border-bottom: 3px solid var(--color-dark-red);
+    margin-bottom: 60px;
+  }
+
+  &__form {
+    width: 400px;
+
+    &-wrapper {
+      width: 400px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-fake {
+      width: 400px;
+      height: 45px;
+      position: relative;
+
+    }
+
+    &-input {
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      border: none;
+      outline: none;
+      background: transparent;
+      padding-left: 45px;
+      font-size: 18px;
+
+      &::placeholder {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: auto;
+        letter-spacing: normal;
+        color: var(--color-dark);
+        background: var(--color-light);
+      }
+      
+      &:focus {
+        border: 1px solid var(--color-dark-red);
+      }
+    }
+
+    &-img {
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+    }
+  }
+  
+  &__entry {
+    &-wrapper {
+      
     }
   }
 }
