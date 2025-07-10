@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking tickets</title>
+  <link rel="stylesheet" href="../styles/style.css">
+</head>
+
+<body>
+
+  <div class="booking">
+    <div class="container">
+      <div class="tour">
+        <img src="../assets/icon/logo-gold.svg" alt="Logo">
+        <h2 class="booking__title title">booking tickets</h2>
+        <p class="booking__text">tour to louvre</p>
+        <div class="booking__line"></div>
+
+        <form class="booking__form">
+          
+          <div class="booking__form-wrapper">
+            <div class="form__wrapper">
+            <div class="form__wrapper-fake">
+              <img src="../assets/icon/form/date.svg" alt="date" id="fakeDateIcon" class="form__wrapper-dateIcon">
+              <span class="form__wrapper-dateText" id="fakeDateText">Date</span>
+              <img src="../assets/icon/form/arrow.svg" alt="arrow" id="fakeDateArrow" class="form__wrapper-dateArrow">
+            </div>
+            <input type="date" id="form__date" class="form__wrapper-date" name="form__date">
+          </div>
+          
+          <div class="form__wrapper">
+            <div class="form__wrapper-fake">
+              <img src="../assets/icon/form/time.svg" alt="time" id="fakeDateIcon" class="form__wrapper-dateIcon">
+              <span class="form__wrapper-dateText" id="fakeTimeText">Time</span>
+              <img src="../assets/icon/form/arrow.svg" alt="arrow" id="fakeDateArrow" class="form__wrapper-dateArrow">
+            </div>
+            <select name="form__time" id="form__time" class="form__wrapper-time">
+            <option value="">Time</option>
+            <option value="09:00">09:00</option>
+            <option value="10:00">10:00</option>
+            <option value="11:00">11:00</option>
+            <option value="12:00">12:00</option>
+            <option value="13:00">13:00</option>
+            <option value="14:00">14:00</option>
+            <option value="15:00">15:00</option>
+            <option value="16:00">16:00</option>
+            <option value="17:00">17:00</option>
+            <option value="18:00">18:00</option>
+          </select>
+          </div>
+          </div>
+          
+          <p class="form__wrapper-fake booking__form-fake">
+            <img src="../assets/icon/form/name.svg" class="booking__form-img" alt="name">
+            <input class="booking__form-input" type="text" placeholder="Name">
+          </p>
+          <p class="form__wrapper-fake booking__form-fake">
+            <img src="../assets/icon/form/email.svg" class="booking__form-img" alt="email">
+            <input class="booking__form-input" type="email" placeholder="Email">
+          </p>
+          <p class="form__wrapper-fake booking__form-fake">
+            <img src="../assets/icon/form/tel.svg" class="booking__form-img" alt="tel">
+            <input class="booking__form-input" type="number" placeholder="Phone">
+          </p>
+          
+          <div class="form__wrapper">
+            <div class="form__wrapper-fake booking__form-fake">
+              <img src="../assets/icon/form/Vector.svg" alt="time" id="fakeDateIcon" class="form__wrapper-dateIcon">
+              <span class="form__wrapper-dateText" id="fakeTypeText">Ticket Type</span>
+              <img src="../assets/icon/form/arrow.svg" alt="arrow" id="fakeDateArrow" class="form__wrapper-dateArrow">
+            </div>
+           <select name="form__type" id="form__type" class="form__wrapper-type">
+            <option value="">Ticket Type</option>
+            <option value="Permanent exhibition">Permanent exhibition</option>
+            <option value="Temporary exhibition">Temporary exhibition</option>
+            <option value="Combined Admission">Combined Admission</option>
+          </select>
+          </div>
+        </form>
+        
+        <div class="booking__entry-wrapper">
+          
+          <p>
+          <input class="booking__entry-input" type="text" placeholder="Entry Ticket">
+        </p>
+        <div class="booking__form-entry">
+          <div class="booking__form-desc">
+            <p>Basic 18+ (20 $)</p>
+            <p>Senior 65+ (10 $)</p>
+          </div>
+          <div class="booking__form-count">
+            <button class="minus">-</button><span>2</span><button class="plus">+</button><br>
+            <button class="minus">-</button><span>2</span><button class="plus">+</button>
+          </div>
+        </div>
+
+        </div>
+
+      </div>
+      <div class="overview">
+
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/form.js"></script>
+</body>
+
+</html>
