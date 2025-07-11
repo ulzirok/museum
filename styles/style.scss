@@ -1020,15 +1020,20 @@ body.lock {
     }
 
     &-inner {
+      
       position: relative;
-      width: 2250px;
+      width: 5000px;
       display: flex;
       gap: 0 20px;
       overflow: hidden;
       
       @include _768-block {
        gap: 0 10px;
-        // width: 1000px;
+       
+      }
+      @include _1200-block {
+       gap: 0 10px;
+       
       }
 
 

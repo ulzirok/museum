@@ -1028,12 +1028,17 @@ body.lock {
 }
 .video__slider-inner {
   position: relative;
-  width: 2250px;
+  width: 5000px;
   display: flex;
   gap: 0 20px;
   overflow: hidden;
 }
 @media (max-width: 768px) {
+  .video__slider-inner {
+    gap: 0 10px;
+  }
+}
+@media (max-width: 1200px) {
   .video__slider-inner {
     gap: 0 10px;
   }
