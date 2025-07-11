@@ -73,6 +73,9 @@ body {
   @include _420-block {
     max-width: 380px;
   }
+  @include _576-block {
+    max-width: 380px;
+  }
 }
 
 .dark-section {
@@ -216,6 +219,11 @@ body {
     width: 380px;
     height: 368px;
   }
+  @include _576-block {
+    width: 380px;
+    height: 368px;
+  }
+  
 }
 
 .slider__explore input {
@@ -353,7 +361,7 @@ body.lock {
   opacity: 0.7;
   z-index: 1000;
   
-  @include _1024-block {
+  @include _1200-block {
     display: none;
   }
 }
@@ -544,6 +552,10 @@ body.lock {
       width: 380px;
       height: 285px;
     }
+    @include _576-block {
+      width: 380px;
+      height: 285px;
+    }
 
     &-wrapper {
       position: relative;
@@ -558,9 +570,11 @@ body.lock {
         width: 728px;
       }
 
+      @include _576-block {
+        width: 380px;
+      }
       @include _420-block {
         width: 380px;
-
       }
     }
 
@@ -571,7 +585,9 @@ body.lock {
     &-img {
       @include _420-block {
         width: 380px;
-
+      }
+      @include _576-block {
+        width: 380px;
       }
     }
     
@@ -602,8 +618,10 @@ body.lock {
       background-color: var(--color-dark);
       align-items: baseline;
 
-      @include _420-block {
-        display: none;
+      @include _576-block {
+        width: 380px;
+        padding: 10px 0;
+        gap: 0 10px;
       }
     }
 
@@ -666,6 +684,10 @@ body.lock {
     gap: 4.69rem 0;
 
     @include _768-block {
+      justify-content: space-around;
+      gap: 40px 56px;
+    }
+    @include _1200-block {
       justify-content: space-around;
       gap: 40px 56px;
     }
@@ -748,10 +770,14 @@ body.lock {
     display: flex;
     justify-content: space-between;
     align-items: start;
-    // flex-wrap: wrap;
+    
 
     @include _1024-block {
       flex-wrap: wrap;
+      // justify-content: center;
+    }
+    @include _1200-block {
+      // flex-wrap: wrap;
       // justify-content: center;
     }
   }
@@ -760,12 +786,16 @@ body.lock {
     max-width: 600px;
     width: 90%;
     margin-bottom: 10.3rem;
-    outline: 1pz solid red;
+    // outline: 1pz solid red;
 
     @include _1024-block {
       max-width: 100%;
       width: 100%;
       margin-bottom: 62px;
+    }
+    @include _1200-block {
+      max-width: 450px;
+      width: 100%;
     }
 
     @include _768-block {
@@ -875,6 +905,9 @@ body.lock {
     justify-content: space-between;
     padding: 20px;
 
+    @include _1200-block {
+      gap: 5px;
+    }
     @include _1024-block {
       gap: 5px;
     }
@@ -969,6 +1002,10 @@ body.lock {
       width: 940px;
     }
 
+    @include _1200-block {
+      width: 1000px;
+      
+    }
     @include _768-block {
       width: 728px;
     }
@@ -977,22 +1014,21 @@ body.lock {
       width: 380px;
       height: auto;
     }
+    @include _576-block {
+      width: 380px;
+      height: auto;
+    }
 
     &-inner {
       position: relative;
       width: 2250px;
       display: flex;
-      // gap: 0 20px;
+      gap: 0 20px;
       overflow: hidden;
-
-
+      
       @include _768-block {
-        // gap: 0 20px;
-        width: 1500px;
-      }
-
-      @include _420-block {
-        // gap: 0;
+       gap: 0 10px;
+        // width: 1000px;
       }
 
 
@@ -1104,6 +1140,11 @@ body.lock {
       align-items: center;
       justify-content: center;
     }
+    @include _576-block {
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
   }
 
   &__wrapper {
@@ -1124,6 +1165,11 @@ body.lock {
       }
 
       @include _420-block {
+        width: 350px;
+        height: 160px;
+
+      }
+      @include _576-block {
         width: 350px;
         height: 160px;
 
@@ -1195,6 +1241,11 @@ body.lock {
       @include _420-block {
         margin-left: 0;
         font-size: 16px;
+      }
+      @include _576-block {
+        align-self: center;
+        font-size: 16px;
+        margin-top: 20px;
       }
 
       &-title {
@@ -1375,6 +1426,10 @@ body.lock {
       width: 380px;
       height: 248px;
     }
+    @include _576-block {
+      width: 380px;
+      height: 248px;
+    }
   }
 }
 
@@ -1434,6 +1489,12 @@ body.lock {
         justify-content: center;
         gap: 95px;
       }
+      @include _576-block {
+        width: 100%;
+        margin-right: 0;
+        justify-content: center;
+        gap: 95px;
+      }
     }
   }
 
@@ -1453,6 +1514,10 @@ body.lock {
     @include _420-block {
       margin: 40px auto 0;
       margin-top: 42px;
+
+    }
+    @include _576-block {
+      margin: 0;
 
     }
 
