@@ -560,13 +560,6 @@ body.lock {
 .welcome__desc-button:hover {
   color: var(--color-gold);
 }
-.welcome__slider-inner {
-  width: 4000px;
-  display: flex;
-  transition: 1s;
-  left: 0;
-  position: relative;
-}
 @media (max-width: 420px) {
   .welcome__img {
     width: 380px;
@@ -583,20 +576,43 @@ body.lock {
     width: 700px;
   }
 }
+@media (max-width: 768px) {
+  .welcome__img-wrapper {
+    width: 728px;
+  }
+}
 @media (max-width: 420px) {
   .welcome__img-wrapper {
     width: 380px;
   }
 }
+@media (max-width: 420px) {
+  .welcome__slider-img {
+    width: 380px;
+  }
+}
+.welcome__slider-inner {
+  width: 5000px;
+  display: flex;
+  transition: 1s;
+  left: 0;
+  position: relative;
+  overflow: hidden;
+}
+@media (max-width: 420px) {
+  .welcome__slider-inner {
+    width: 380px;
+  }
+}
 .welcome__slider-item {
   position: absolute;
-  bottom: 0;
+  bottom: 50px;
   right: 0;
   width: 600px;
   display: flex;
   justify-content: center;
   gap: 0 55px;
-  padding: 40px 75px;
+  padding: 25px 50px 0;
   background-color: var(--color-dark);
   align-items: baseline;
 }
@@ -943,14 +959,12 @@ body.lock {
 }
 .video__slider-inner {
   position: relative;
-  width: 2400px;
+  width: 2250px;
   display: flex;
-  gap: 0 20px;
   overflow: hidden;
 }
 @media (max-width: 768px) {
   .video__slider-inner {
-    gap: 0 20px;
     width: 1500px;
   }
 }

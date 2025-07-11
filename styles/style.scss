@@ -529,20 +529,6 @@ body.lock {
     }
   }
 
-  &__slider {
-
-    &-inner {
-      width: 4000px;
-      // outline: 1px solid blue;
-      display: flex;
-      transition: 1s;
-      left: 0;
-      position: relative;
-
-      @include _420-block {}
-    }
-  }
-
   &__img {
     @include _420-block {
       width: 380px;
@@ -558,9 +544,9 @@ body.lock {
         width: 700px;
       }
 
-      // @include _768-block {
-      //   width: 728px;
-      // }
+      @include _768-block {
+        width: 728px;
+      }
 
       @include _420-block {
         width: 380px;
@@ -571,16 +557,38 @@ body.lock {
   }
 
   &__slider {
+    
+    &-img {
+      @include _420-block {
+        width: 380px;
+
+      }
+    }
+    
+    &-inner {
+      width: 5000px;
+      // outline: 1px solid blue;
+      display: flex;
+      transition: 1s;
+      left: 0;
+      position: relative;
+      overflow: hidden;
+
+      @include _420-block {
+        width: 380px;
+      }
+    }
+    
 
     &-item {
       position: absolute;
-      bottom: 0;
+      bottom: 50px;
       right: 0;
       width: 600px;
       display: flex;
       justify-content: center;
       gap: 0 55px;
-      padding: 40px 75px;
+      padding: 25px 50px 0;
       background-color: var(--color-dark);
       align-items: baseline;
 
@@ -962,14 +970,14 @@ body.lock {
 
     &-inner {
       position: relative;
-      width: 2400px;
+      width: 2250px;
       display: flex;
-      gap: 0 20px;
+      // gap: 0 20px;
       overflow: hidden;
 
 
       @include _768-block {
-        gap: 0 20px;
+        // gap: 0 20px;
         width: 1500px;
       }
 
