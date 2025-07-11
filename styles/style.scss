@@ -1645,18 +1645,28 @@ body.lock {
 }
 
 .booking {
+  outline: 1px solid red;
+  overflow: hidden;
   &__inner {
+    overflow: hidden;
     padding: 50px 0;
-    width: 970px;
+    max-width: 1000px;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: end;
 
+    
+     @include _1024-block {
+      flex-wrap: wrap;
+      width: 400px;
+    }
     @include _420-block {
       flex-wrap: wrap;
       width: 400px;
     }
+   
   }
 
   &__tour {
@@ -1665,6 +1675,10 @@ body.lock {
     @include _420-block {
       margin-bottom: 50px;
       width: 380px;
+    }
+    @include _1200-block {
+      margin-bottom: 50px;
+      width: 400px;
     }
   }
 
@@ -1846,6 +1860,9 @@ body.lock {
     @include _420-block {
       width: 400px;
     }
+    @include _1200-block {
+      width: 400px;
+    }
   }
 
   &__blok1 {
@@ -1963,6 +1980,12 @@ body.lock {
         height: auto;
         gap: 25px 0;
       }
+      @include _1024-block {
+        flex-wrap: wrap;
+        height: auto;
+        gap: 25px 0;
+      }
+      
     }
 
     &-behind {
@@ -1975,6 +1998,9 @@ body.lock {
       justify-content: end;
 
       @include _420-block {
+        margin-left: 0;
+      }
+      @include _1024-block {
         margin-left: 0;
       }
 
@@ -2000,6 +2026,9 @@ body.lock {
       padding: 15px 20px;
 
       @include _420-block {
+        position: static;
+      }
+      @include _1024-block {
         position: static;
       }
 
@@ -2076,6 +2105,9 @@ body.lock {
       text-align: center;
 
       @include _420-block {
+        width: 100%;
+      }
+      @include _1024-block {
         width: 100%;
       }
     }
