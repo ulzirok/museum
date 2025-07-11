@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking tickets</title>
+  <link rel="stylesheet" href="../styles/style.css">
+</head>
+
+<body>
+
+  <section class="booking">
+    <div class="container">
+
+      <div class="booking__inner">
+        <div class="booking__tour">
+          <img src="../assets/icon/logo-gold.svg" alt="Logo" width="85" height="41">
+          <h2 class="booking__title title">booking tickets</h2>
+          <p class="booking__text">tour to louvre</p>
+          <div class="booking__line"></div>
+
+          <form class="booking__form" id="form">
+
+            <div class="booking__form-wrapper">
+              <div class="form__wrapper">
+                <div class="form__wrapper-fake">
+                  <img src="../assets/icon/form/date.svg" alt="date" id="fakeDateIcon" class="form__wrapper-dateIcon">
+                  <span class="form__wrapper-dateText" id="fakeDateText">Date</span>
+                  <img src="../assets/icon/form/arrow.svg" alt="arrow" id="fakeDateArrow"
+                    class="form__wrapper-dateArrow">
+                </div>
+                <input type="date" id="form__dateID" class="form__wrapper-date" name="form__date">
+              </div>
+
+              <div class="form__wrapper">
+                <div class="form__wrapper-fake">
+                  <img src="../assets/icon/form/time.svg" alt="time" id="fakeDateIcon" class="form__wrapper-dateIcon">
+                  <span class="form__wrapper-dateText" id="fakeTimeText">Time</span>
+                  <img src="../assets/icon/form/arrow.svg" alt="arrow" id="fakeDateArrow"
+                    class="form__wrapper-dateArrow">
+                </div>
+                <select name="form__time" id="form__time" class="form__wrapper-time">
+                  <option value="" disabled selected>Time</option>
+                  <option value="09:00">09:00</option>
+                  <option value="10:00">10:00</option>
+                  <option value="11:00">11:00</option>
+                  <option value="12:00">12:00</option>
+                  <option value="13:00">13:00</option>
+                  <option value="14:00">14:00</option>
+                  <option value="15:00">15:00</option>
+                  <option value="16:00">16:00</option>
+                  <option value="17:00">17:00</option>
+                  <option value="18:00">18:00</option>
+                </select>
+              </div>
+            </div>
+            
+            <!-- FIO -->
+
+            <p class="form__wrapper-fake booking__form-fake error-element">
+              <img src="../assets/icon/form/name.svg" class="booking__form-img" alt="name">
+              <input class="booking__form-input" type="text" placeholder="Name" id="name">
+            </p>
+            <p class="form__wrapper-fake booking__form-fake error-element">
+              <img src="../assets/icon/form/email.svg" class="booking__form-img" alt="email">
+              <input class="booking__form-input" type="email" placeholder="Email" id="email">
+            </p>
+            <p class="form__wrapper-fake booking__form-fake">
+              <img src="../assets/icon/form/tel.svg" class="booking__form-img" alt="tel">
+              <input class="booking__form-input" type="number" placeholder="Phone" id="phone">
+            </p>
+
+            <div class="form__wrapper">
+              <div class="form__wrapper-fake booking__form-fake">
+                <img src="../assets/icon/form/Vector.svg" alt="time" id="fakeDateIcon" class="form__wrapper-dateIcon">
+                <span class="form__wrapper-dateText" id="fakeTypeText">Ticket Type</span>
+                <img src="../assets/icon/form/arrow.svg" alt="arrow" id="fakeDateArrow" class="form__wrapper-dateArrow">
+              </div>
+              <select name="form__type" id="form__type" class="form__wrapper-type">
+                <option value="" disabled selected>Ticket Type</option>
+                <option value="Permanent exhibition" data-price="20">Permanent exhibition</option>
+                <option value="Temporary exhibition" data-price="25">Temporary exhibition</option>
+                <option value="Combined Admission" data-price="40">Combined Admission</option>
+              </select>
+            </div>
+          </form>
+
+          <div class="booking__entry-wrapper">
+
+            <p>
+              <input class="booking__entry-input" type="text" placeholder="Entry Ticket">
+            </p>
+
+            <div class="booking__entry-body">
+              <div class="booking__entry-desc">
+                <p><span>Basic 18+ (20 $)</span></p>
+                <p><span>Senior 65+ (10 $)</span></p>
+              </div>
+              <div class="booking__entry-count">
+                <p>
+                  <button class="bookin__minus booking__entry-btn booking__minus1">-</button>
+                  <span class="booking__span1">0</span>
+                  <button class="booking__plus booking__entry-btn booking__plus1">+</button>
+                </p>
+                <p>
+                  <button class="bookin__minus booking__entry-btn booking__minus2">-</button>
+                  <span class="booking__span2">0</span>
+                  <button class="booking__plus booking__entry-btn booking__plus2">+</button>
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="booking__overview">
+
+          <div class="booking__blok1">
+
+            <div class="booking__blok1-desc">
+              <h2 class="booking__blok1-title">overview</h2>
+              <p class="booking__blok1-text">tour to louvre</p>
+
+              <div class="booking__blok1-body">
+                <p class="booking__blok1-date"><img src="../assets/icon/form/date.svg" alt="date">Day, Month, Year</p>
+                <p class="booking__blok1-time"><img src="../assets/icon/form/time.svg" alt="time">Time</p>
+                <p class="booking__blok1-type"><img src="../assets/icon/form/check_circle_outline.svg"
+                    alt="check_circle">Ticket Type</p>
+              </div>
+            </div>
+
+            <div class="booking__blok1-img">
+              <img src="../assets/img/form/overview.jpg" alt="overview-img" width="150" height="120">
+            </div>
+          </div>
+
+          <div class="booking__blok2">
+
+            <div class="booking__blok2-tariff">
+              <p class="booking__blok2-count"><span class="booking__spanDisp1">0</span> basic (20 $)</p>
+              <p class="booking__blok2-count"><span class="booking__spanDisp2">0</span> senior (10 $)</p>
+            </div>
+
+            <div class="booking__blok2-price">
+              <p id="basic-price">0 $</p>
+              <p id="senior-price">0 $</p>
+            </div>
+          </div>
+
+          <div class="booking__blok3">
+            <p class="booking__blok3-total">total:</p>
+            <p class="booking__blok3-price" id="total-price">0 $</p>
+          </div>
+
+          <div class="booking__blok4">
+
+            <div class="booking__blok4-card">
+              <div class="booking__blok4-front">
+                <div class="booking__blok4-left">
+                  <label>
+                    <p>Card number</p>
+                    <input type="number" class="booking__blok4-input booking__blok4-inputWidth">
+                  </label>
+                  <label>
+                    <p>Expiration date</p>
+                    <div class="booking__blok4-wrap">
+                      <input type="number" class="booking__blok4-input booking__blok4-inputDate">
+                      <select name="booking__blok4-select" id="booking__blok4-select"
+                        class="booking__blok4-select booking__blok4-inputDate">
+                        <!-- Option -->
+                      </select>
+                    </div>
+                  </label>
+                </div>
+
+                <div class="booking__blok4-right">
+                  <img src="../assets/img/form/Visa.svg" alt="">
+                  <img src="../assets/img/form/Mastercard.svg" alt="">
+                </div>
+
+                <label class="booking__blok4-cardholder">
+                  <p>Cardholder name</p>
+                  <input type="text" class="booking__blok4-input">
+                </label>
+
+              </div>
+              <div class="booking__blok4-behind">
+                <div class="booking__blok4-body">
+                  <div class="booking__blok4-chip"></div>
+                  <label>
+                    <p class="booking__blok4-textCV">CVC/CVV</p>
+                    <input type="text" class="booking__blok4-cv">
+                  </label>
+                  <p class="booking__blok4-descCV">
+                    The last 3 or 4 digits on back of the card
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+            <button class="booking__blok4-btn" type="submit" form="form">Book</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="../js/form.js" defer></script>
+  <script src="../js/booking.js" defer></script>
+</body>
+
+</html>
