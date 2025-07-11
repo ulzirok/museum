@@ -3,8 +3,18 @@
     @content;
   }
 }
+@mixin _1200-block{
+  @media (max-width: 1200px){
+    @content;
+  }
+}
 @mixin _768-block{
   @media (max-width: 768px){
+    @content;
+  }
+}
+@mixin _576-block{
+  @media (max-width: 576px){
     @content;
   }
 }
