@@ -222,8 +222,8 @@ body {
   height: 7px;
   border-radius: 50%;
   background-color: var(--color-dark);
-  top: 5px;
-  left: 5px;
+  top: 4px;
+  left: 4px;
 }
 
 .radio-label {
@@ -1166,20 +1166,39 @@ body.lock {
     margin-top: 40px;
   }
 }
-.tickets__form-amount-input {
+.tickets__form-amount-body {
   width: 100%;
-  margin-bottom: 10px;
-  border: 3px solid var(--color-dark);
-  box-sizing: border-box;
 }
-.tickets__form-amount-span {
-  margin-bottom: 10px;
-  display: inline-block;
+.tickets__form-amount-count {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  align-items: center;
+  vertical-align: baseline;
+  color: var(--color-dark);
+  border: 2px solid var(--color-dark);
 }
-@media (max-width: 1024px) {
-  .tickets__form-amount-span {
-    font-size: 22px;
-  }
+.tickets__form-amount-count span {
+  margin: 0;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tickets__form-amount-btn {
+  width: 50px;
+  height: 50px;
+  font-size: 25px;
+  font-weight: 500;
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
 }
 .tickets__form-link {
   padding: 13px 25px;

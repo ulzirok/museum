@@ -30,7 +30,7 @@
                   <img src="../assets/icon/form/arrow.svg" alt="arrow" id="fakeDateArrow"
                     class="form__wrapper-dateArrow">
                 </div>
-                <input type="date" id="form__date" class="form__wrapper-date" name="form__date">
+                <input type="date" id="form__dateID" class="form__wrapper-date" name="form__date">
               </div>
 
               <div class="form__wrapper">
@@ -77,9 +77,9 @@
               </div>
               <select name="form__type" id="form__type" class="form__wrapper-type">
                 <option value="" disabled selected>Ticket Type</option>
-                <option value="Permanent exhibition">Permanent exhibition</option>
-                <option value="Temporary exhibition">Temporary exhibition</option>
-                <option value="Combined Admission">Combined Admission</option>
+                <option value="Permanent exhibition" data-price="20">Permanent exhibition</option>
+                <option value="Temporary exhibition" data-price="25">Temporary exhibition</option>
+                <option value="Combined Admission" data-price="40">Combined Admission</option>
               </select>
             </div>
           </form>
@@ -204,7 +204,8 @@
     </div>
   </section>
 
-  <script src="../js/form.js"></script>
+  <script src="../js/form.js" defer></script>
+  <script src="../js/booking.js" defer></script>
 </body>
 
 </html>

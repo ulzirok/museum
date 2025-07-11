@@ -1,4 +1,4 @@
-const video = document.querySelector('.video-main')
+let mainVideo = document.querySelector('.video-main')
 const progress = document.querySelector('.video__range-input')
 const play = document.querySelector('.video__range-play')
 const toggle = document.querySelector('.play-toggle')
@@ -9,32 +9,32 @@ const volumeImg = document.querySelector('.video__range-volume')
 const volumeBtn = document.querySelector('.video__range-btn')
 
 play.addEventListener('click', toggleVideo) 
-video.addEventListener('click', toggleVideo) 
+mainVideo.addEventListener('click', toggleVideo) 
 
 function toggleVideo () {
-  if (video.paused) {
-    video.play()
+  if (mainVideo.paused) {
+    mainVideo.play()
     toggle.src = './assets/icon/pause.png'
     toggle.style.width = '23px'
     toggle.style.height = '31px'
   }
   else {
-    video.pause()
+    mainVideo.pause()
     toggle.src = './assets/icon/video-play.svg'
   }
 }
 
-video.addEventListener('timeupdate', updateProgress)
+mainVideo.addEventListener('timeupdate', updateProgress)
 
 function updateProgress() {
-   progress.value = (video.currentTime / video.duration) * 100
+   progress.value = (mainVideo.currentTime / mainVideo.duration) * 100
 
-   let minutes = Math.floor(video.currentTime / 60)
+   let minutes = Math.floor(mainVideo.currentTime / 60)
    if(minutes < 10) {
       minutes = '0' + String(minutes)
    }
    
-   let seconds = Math.floor(video.currentTime % 60)
+   let seconds = Math.floor(mainVideo.currentTime % 60)
    if(seconds < 10) {
       seconds = '0' + String(seconds)
    }
@@ -47,13 +47,13 @@ volume.addEventListener('input', volum)
 
 function volum() {
    let vol = this.value
-   video.volume = vol / 100
+   mainVideo.volume = vol / 100
 }
 
 volumeBtn.addEventListener('click', () => {
-  video.muted = !video.muted;
+  mainVideo.muted = !mainVideo.muted;
   
-  if (video.muted) {
+  if (mainVideo.muted) {
     volumeImg.src = './assets/icon/muted.png'
     volumeImg.style.width = '35px'
     volumeImg.style.height = '35px'
@@ -64,7 +64,7 @@ volumeBtn.addEventListener('click', () => {
 
 fullscreen.addEventListener('click', () => {
   if (!document.fullscreenElement) {
-    video.requestFullscreen()
+    mainVideo.requestFullscreen()
   }
   else {
     document.exitFullscreen()
