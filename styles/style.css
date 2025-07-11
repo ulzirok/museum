@@ -1951,4 +1951,8 @@ body.lock {
   line-height: auto;
   letter-spacing: normal;
   text-align: center;
+  cursor: pointer;
+}
+.booking__blok4-btn:hover {
+  color: var(--color-gold);
 }/*# sourceMappingURL=style.css.map */

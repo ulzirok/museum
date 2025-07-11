@@ -20,7 +20,7 @@
           <p class="booking__text">tour to louvre</p>
           <div class="booking__line"></div>
 
-          <form class="booking__form">
+          <form class="booking__form" id="form">
 
             <div class="booking__form-wrapper">
               <div class="form__wrapper">
@@ -55,18 +55,20 @@
                 </select>
               </div>
             </div>
+            
+            <!-- FIO -->
 
-            <p class="form__wrapper-fake booking__form-fake">
+            <p class="form__wrapper-fake booking__form-fake error-element">
               <img src="../assets/icon/form/name.svg" class="booking__form-img" alt="name">
-              <input class="booking__form-input" type="text" placeholder="Name">
+              <input class="booking__form-input" type="text" placeholder="Name" id="name">
             </p>
-            <p class="form__wrapper-fake booking__form-fake">
+            <p class="form__wrapper-fake booking__form-fake error-element">
               <img src="../assets/icon/form/email.svg" class="booking__form-img" alt="email">
-              <input class="booking__form-input" type="email" placeholder="Email">
+              <input class="booking__form-input" type="email" placeholder="Email" id="email">
             </p>
             <p class="form__wrapper-fake booking__form-fake">
               <img src="../assets/icon/form/tel.svg" class="booking__form-img" alt="tel">
-              <input class="booking__form-input" type="number" placeholder="Phone">
+              <input class="booking__form-input" type="number" placeholder="Phone" id="phone">
             </p>
 
             <div class="form__wrapper">
@@ -92,17 +94,19 @@
 
             <div class="booking__entry-body">
               <div class="booking__entry-desc">
-                <p>Basic 18+ (20 $)</p>
-                <p>Senior 65+ (10 $)</p>
+                <p><span>Basic 18+ (20 $)</span></p>
+                <p><span>Senior 65+ (10 $)</span></p>
               </div>
               <div class="booking__entry-count">
                 <p>
-                  <button class="minus booking__entry-btn">-</button><span>2</span><button
-                    class="plus booking__entry-btn">+</button>
+                  <button class="bookin__minus booking__entry-btn booking__minus1">-</button>
+                  <span class="booking__span1">0</span>
+                  <button class="booking__plus booking__entry-btn booking__plus1">+</button>
                 </p>
                 <p>
-                  <button class="minus booking__entry-btn">-</button><span>2</span><button
-                    class="plus booking__entry-btn">+</button>
+                  <button class="bookin__minus booking__entry-btn booking__minus2">-</button>
+                  <span class="booking__span2">0</span>
+                  <button class="booking__plus booking__entry-btn booking__plus2">+</button>
                 </p>
               </div>
             </div>
@@ -120,33 +124,34 @@
               <p class="booking__blok1-text">tour to louvre</p>
 
               <div class="booking__blok1-body">
-                <p class="booking__blok1-date"><img src="../assets/icon/form/date.svg" alt="date">friday, august 19</p>
-                <p class="booking__blok1-time"><img src="../assets/icon/form/time.svg" alt="time">16 : 30</p>
-                <p class="booking__blok1-type"><img src="../assets/icon/form/check_circle_outline.svg" alt="check_circle">temporary exhibition</p>
+                <p class="booking__blok1-date"><img src="../assets/icon/form/date.svg" alt="date">Day, Month, Year</p>
+                <p class="booking__blok1-time"><img src="../assets/icon/form/time.svg" alt="time">Time</p>
+                <p class="booking__blok1-type"><img src="../assets/icon/form/check_circle_outline.svg"
+                    alt="check_circle">Ticket Type</p>
               </div>
             </div>
-            
+
             <div class="booking__blok1-img">
               <img src="../assets/img/form/overview.jpg" alt="overview-img" width="150" height="120">
             </div>
           </div>
 
           <div class="booking__blok2">
-            
+
             <div class="booking__blok2-tariff">
-              <p class="booking__blok2-count"><span>2</span> basic (20 $)</p>
-              <p class="booking__blok2-count"><span>2</span> senior (10 $)</p>
+              <p class="booking__blok2-count"><span class="booking__spanDisp1">0</span> basic (20 $)</p>
+              <p class="booking__blok2-count"><span class="booking__spanDisp2">0</span> senior (10 $)</p>
             </div>
-            
+
             <div class="booking__blok2-price">
-              <p id="basic-price">40 $</p>
-              <p id="senior-price">20 $</p>
+              <p id="basic-price">0 $</p>
+              <p id="senior-price">0 $</p>
             </div>
           </div>
 
           <div class="booking__blok3">
             <p class="booking__blok3-total">total:</p>
-            <p class="booking__blok3-price" id="total-price">60 $</p>
+            <p class="booking__blok3-price" id="total-price">0 $</p>
           </div>
 
           <div class="booking__blok4">
@@ -196,7 +201,7 @@
 
             </div>
 
-            <button class="booking__blok4-btn" type="submit">Book</button>
+            <button class="booking__blok4-btn" type="submit" form="form">Book</button>
           </div>
         </div>
       </div>

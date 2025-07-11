@@ -2043,6 +2043,10 @@ body.lock {
       line-height: auto;
       letter-spacing: normal;
       text-align: center;
+      cursor: pointer;
+      &:hover {
+        color: var(--color-gold);
+      }
     }
 
   }
