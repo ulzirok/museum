@@ -96,9 +96,18 @@ body {
     font-size: 16px;
     letter-spacing: 5px;
   }
+  @include _576-block {
+    margin-bottom: 40px;
+    font-size: 16px;
+    letter-spacing: 5px;
+  }
 
   img {
     @include _420-block {
+      width: 29px;
+      height: 16px;
+    }
+    @include _576-block {
       width: 29px;
       height: 16px;
     }
@@ -1285,6 +1294,7 @@ body.lock {
         font-weight: 500;
         text-align: center;
         align-items: center;
+        justify-content: center;
         vertical-align: baseline;
         color: var(--color-dark);
         border: 2px solid var(--color-dark);
@@ -1309,6 +1319,7 @@ body.lock {
         background: none;
         outline: none;
         cursor: pointer;
+        color: var(--color-dark);
       }
 
     }
@@ -1451,6 +1462,10 @@ body.lock {
       flex-wrap: wrap;
       padding: 40px 0 40px;
     }
+    @include _576-block {
+      align-items: center;
+      padding: 30px 0 30px;
+    }
   }
 
   &__list {
@@ -1459,6 +1474,10 @@ body.lock {
     gap: 25px 0;
 
     @include _420-block {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    @include _576-block {
       flex-wrap: wrap;
       justify-content: space-around;
     }
@@ -1471,6 +1490,9 @@ body.lock {
       }
 
       @include _420-block {
+        font-size: 16px;
+      }
+      @include _576-block {
         font-size: 16px;
       }
 
@@ -1500,6 +1522,7 @@ body.lock {
         margin-right: 0;
         justify-content: center;
         gap: 95px;
+        
       }
     }
   }
@@ -1524,7 +1547,8 @@ body.lock {
     }
     @include _576-block {
       margin: 0;
-
+      margin-top: 20px;
+      margin-left: 20px;
     }
 
     &-link {
@@ -1562,6 +1586,9 @@ body.lock {
         @include _420-block {
           display: none;
         }
+        @include _576-block {
+          display: none;
+        }
       }
     }
   }
@@ -1571,6 +1598,9 @@ body.lock {
     letter-spacing: 2px;
 
     @include _420-block {
+      font-size: 16px;
+    }
+    @include _576-block {
       font-size: 16px;
     }
 
