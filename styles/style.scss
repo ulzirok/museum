@@ -251,6 +251,9 @@ body {
   @include _420-block {
     height: 368px;
   }
+  @include _576-block {
+    height: 368px;
+  }
 }
 
 .panorama {
@@ -601,9 +604,7 @@ body.lock {
       position: relative;
       overflow: hidden;
 
-      @include _420-block {
-        width: 380px;
-      }
+      
     }
     
 
@@ -1022,23 +1023,12 @@ body.lock {
     }
 
     &-inner {
-      
+      // outline: 1px solid red;
       position: relative;
       width: 5000px;
       display: flex;
-      gap: 0 20px;
+      gap: 0 10px;
       overflow: hidden;
-      
-      @include _768-block {
-       gap: 0 10px;
-       
-      }
-      @include _1200-block {
-       gap: 0 10px;
-       
-      }
-
-
     }
 
     &-slide {
@@ -1070,7 +1060,7 @@ body.lock {
       }
 
       @include _420-block {
-        display: none;
+        // display: none;
       }
     }
 
@@ -1079,6 +1069,11 @@ body.lock {
       height: 20px;
       border-radius: 50%;
       background-color: #999;
+      
+      @include _576-block {
+        width: 10px;
+      height: 10px;
+      }
 
       &.active {
         background-color: #333;

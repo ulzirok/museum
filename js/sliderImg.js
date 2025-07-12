@@ -4,6 +4,7 @@ const prev = document.querySelector('.prev');
 const liAll = document.querySelectorAll('.welcome__slider-indicators li');
 const currentSpan = document.getElementById('current');
 const totalSpan = document.getElementById('total');
+const welcomeImg = document.querySelectorAll('.welcome__img');
 
 let move = 0;
 let i = 0;
@@ -26,8 +27,8 @@ function right() {
   }
   liAll[i].classList.add('active');
 
-  move -= 1000;
-  if (move < -1000 * (liAll.length - 1)) {
+  move -= welcomeImg[i].offsetWidth;
+  if (move < -welcomeImg[i].offsetWidth * (liAll.length - 1)) {
     move = 0;
   }
   
@@ -46,11 +47,12 @@ function left() {
   liAll[i].classList.add('active');
 
   if (move === 0) {
-    move = -1000 * (liAll.length - 1);
+    move = -welcomeImg[i].offsetWidth * (liAll.length - 1);
   } else {
-    move += 1000;
+    move += welcomeImg[i].offsetWidth;
   }
 
+  inner.style.left = move + 'px';
   updateCounter()
 }
 
@@ -63,7 +65,7 @@ liAll.forEach((li, index) => {
     this.classList.add('active');
     i = index
     
-    move = -1000 * index;
+    move = -welcomeImg[i].offsetWidth * index;
     inner.style.left = move + 'px';
     
     updateCounter()
@@ -73,7 +75,6 @@ liAll.forEach((li, index) => {
 function updateCounter () {
   currentSpan.textContent = (i + 1).toString().padStart(2, '0')
 }
-
 
 
 

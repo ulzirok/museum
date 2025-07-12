@@ -1,5 +1,6 @@
 const liVideoAll = document.querySelectorAll('.video__slider-indicator')
 const innerVideo = document.querySelector('.video__slider-inner')
+const slideVideo = document.querySelectorAll('.video__slider-slide')
 
 let moveVideo = 0
 let k = 0
@@ -13,8 +14,8 @@ liVideoAll.forEach((li, index) => {
     this.classList.add('active')
     k = index
     
-    moveVideo = -470 * index
-    if (moveVideo < -1000 * (liVideoAll.length - 1)) {
+    moveVideo = -(slideVideo[i].offsetWidth + 10) * index
+    if (moveVideo < -(slideVideo[i].offsetWidth + 10) * (liVideoAll.length - 1)) {
     moveVideo = 0;
   }
     
